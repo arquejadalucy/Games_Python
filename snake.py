@@ -15,7 +15,7 @@ colision_noise = pygame.mixer.Sound('smw_coin.wav')
 cor_tela = (3, 83, 164)
 cor_cobra = (251, 86, 7)
 cor_comida = (56, 176, 0)
-amarelo = (255, 190, 11)
+cor_texto = (255, 190, 11)
 
 dimensoes = (600, 600)
 
@@ -118,9 +118,9 @@ def verifica_mordeu_cobra(lista_cobra):
 ##pontuação
 def atualizar_pontos(lista_cobra):
     pts = str(len(lista_cobra))
-    score = fonte.render('Pontuação: ' + pts, True, amarelo)
+    score = fonte.render('Pontuação: ' + pts, True, cor_texto)
     tela.blit(score, [0,0])
-
+# Loop do jogo
 while True:
     #jogos sempre trabalham dentro de um loop
     pygame.display.update()  #atualiza a tela
